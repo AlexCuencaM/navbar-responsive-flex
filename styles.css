@@ -1,0 +1,59 @@
+body {    
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ul{
+    list-style: none;
+}
+
+.navbar-responsive{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar__button{
+    background: white;
+    border: none;
+    margin: 1rem;
+    padding: .9rem 1rem;
+}
+.navbar__button:hover{
+    background: rgb(221, 221, 221);
+}
+
+.navbar-responsive .navbar__list{
+    display: none;
+    position: absolute;
+    top:100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+.navbar__list-item{
+    margin: 1rem 0;
+}
+
+.navbar-responsive .active{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    z-index: 5;
+    background: white;
+}
+
+@media screen and (min-width: 720px) {
+    .navbar-responsive .navbar__button{
+        display: none;
+    }
+    .navbar-responsive .navbar__list{
+        position: static;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 2rem;
+    }
+    .navbar__list-item{
+        margin: 0 1rem;
+        padding: 1rem .5rem;
+    }
+}
